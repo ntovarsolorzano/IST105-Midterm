@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo $output;
 
 } else {
-    // Handle cases where the form wasn't submitted via POST
+    // Handle cases where the form wasn't submitted via POST!
     echo "<b>Error:</b> Please submit the form.";
 }
 
