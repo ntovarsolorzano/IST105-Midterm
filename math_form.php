@@ -23,5 +23,15 @@
     <input type="submit" value="Calculate">
 </form>
 
+<?php
+// Get and display the public IP address (always displayed)
+$publicIP = trim(shell_exec('curl -4 ifconfig.io'));
+if (!empty($publicIP)) {
+    echo "<p><strong>Public IP Address:</strong> " . htmlspecialchars($publicIP) . "</p>";
+} else {
+    echo "<p><strong>Could not retrieve public IP address.</strong></p>";
+}
+?>
+
 </body>
 </html>
